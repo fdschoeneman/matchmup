@@ -29,7 +29,7 @@ describe User do
 
     specify "has_many" do
 
-      must_have_many(User, Demo)
+      must_have_many(User, :demos)
 
     end
     specify "belongs to" do

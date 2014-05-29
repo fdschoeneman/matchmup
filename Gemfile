@@ -69,6 +69,7 @@ group :development, :test do
   gem 'konacha'
   gem 'ember-konacha-rails'
   gem 'poltergeist'
+  gem 'selenium-webdriver'
 
   # ubuntu notifications for test
   gem 'rb-inotify'
@@ -87,6 +88,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-minitest'
+  gem 'guard-konacha'
 
 end
 
@@ -98,4 +100,3 @@ end
 
 
 
-gem "poltergeist", group: [:development, :test]

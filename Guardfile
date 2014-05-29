@@ -20,3 +20,14 @@ guard :minitest, spring: true, bundler: false  do
   watch(%r{^test/support/(.+)\.rb$})                      { 'test' }
   watch(%r{^test/.+_test\.rb$})
 end
+
+### Guard::Konacha
+#  available options:
+#  - :run_all_on_start, defaults to true
+#  - :notification, defaults to true
+#  - :rails_environment_file, location of rails environment file,
+#    should be able to find it automatically
+guard :konacha do
+  watch(%r{^app/assets/javascripts/(.*)\.js(\.coffee)?$}) { |m| "#{m[1]}_spec.js" }
+  watch(%r{^spec/javascripts/.+_spec(\.js|\.js\.coffee)$})
+end

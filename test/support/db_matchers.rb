@@ -26,12 +26,12 @@ module DBMatchers
   end
 
   def must_have_many(parent_model, child_model)
-    binding.pry
-    User.reflections[:orgs_users].macro.must_equal :has_many
+    parent_model.reflections[child_model].macro.must_equal :has_many
   end
 
   def must_have_many_through(model, join_model)
-    User.reflections[:orgs].options[:through].must_equal :orgs_users
+
+    # User.reflections[:orgs].options[:through].must_equal :orgs_users
   end
 
   def wont_have_many_through(model, join_model)

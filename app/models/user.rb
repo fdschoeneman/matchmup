@@ -6,17 +6,7 @@ class User < ActiveRecord::Base
 
   # associations
   has_many :demos
+
+  # validations
 end
 
-
-# => [:reflections,
-#  :reflections?,
-#  :reflections=,
-#  :aggregate_reflections,
-#  :aggregate_reflections?,
-#  :aggregate_reflections=,
-#  :reflect_on_all_aggregations,
-#  :reflect_on_aggregation,
-#  :reflect_on_all_associations,
-#  :reflect_on_association,
-#  :reflect_on_all_autosave_associations]
