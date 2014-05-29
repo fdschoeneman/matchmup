@@ -10,6 +10,12 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
+# foundation framework for css & js
+gem 'foundation-rails'
+
+# haml for rails views
+gem 'haml-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -37,6 +43,12 @@ gem 'aasm'
 # store application variables safely
 gem 'figaro'
 
+# ember
+gem 'ember-rails'
+gem 'ember-source', '1.5.0'
+gem 'ember-data-source', '1.0.0.beta.7'
+
+
 group :development do
 
 end
@@ -47,9 +59,16 @@ end
 
 group :development, :test do
 
+  # minitest & friends
+  gem 'minitest'
   gem 'minitest-rails'
   gem 'factory_girl_rails'
   gem 'spring'
+
+  # js testing
+  gem 'konacha'
+  gem 'ember-konacha-rails'
+  gem 'poltergeist'
 
   # ubuntu notifications for test
   gem 'rb-inotify'
@@ -60,13 +79,15 @@ group :development, :test do
   gem 'pry'
   gem 'awesome_print', require: 'ap'
 
+  # clean up database between runs
+  gem 'database_cleaner'
+
   # Guards
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-minitest'
 
-  gem 'database_cleaner'
 end
 
 group :doc do
@@ -76,3 +97,5 @@ group :doc do
 end
 
 
+
+gem "poltergeist", group: [:development, :test]
