@@ -2,7 +2,17 @@
 %html
   %head
     %title Matchmup
+
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Lato", rel: "stylesheet", type: "text/css"}/
+    / Favicons
+    %link{href: "assets/favicon/apple-touch-icon-precomposed.png", rel: "apple-touch-icon-precomposed"}/
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      / <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      / <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     = stylesheet_link_tag    'application', media: 'all'
+    / # = javascript_include_tag 'vendor/modernizr'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
@@ -12,3 +22,366 @@
     - if user_signed_in?
       = button_to 'Sign Out', destroy_user_session_path, method: :delete
     = yield
+    / .preloader
+    /   = image_tag("preloader.gif", alt: "preload")
+    #menu
+      .inner
+        %nav
+          %span.logo
+          %a.home{href: "#home"}
+            %img.preloadThis{alt: "link", "data-src" => "assets/ico/001.png", src: "assets/logo_th.png"}/
+          %a.about{href: "#about"}
+            %img.preloadThis{alt: "link", "data-src" => "assets/ico/049.png", src: "assets/logo_th.png"}/
+          %a.portfolio{href: "#portfolio"}
+            %img.preloadThis{alt: "link", "data-src" => "assets/ico/130.png", src: "assets/logo_th.png"}/
+          %a.services{href: "#services"}
+            %img.preloadThis{alt: "link", "data-src" => "assets/ico/151.png", src: "assets/logo_th.png"}/
+          %a.contact{href: "#contact"}
+            %img.preloadThis{alt: "link", "data-src" => "assets/ico/019.png", src: "assets/logo_th.png"}/
+    .wrapper
+      .inner
+        / home
+        %section#home.section.show
+          .row
+            .large-6.medium-centered.small-centered.columns
+              %h1.head_title.text-center MAB
+              %h2.subhead_title.text-center THEME DESIGN STUDIO
+              %p.text-center Let's tell the stories that matter.
+              %ul.share.text-center
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "assets/ico/093.png", src: "assets/logo_th.png"}/
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "assets/ico/096.png", src: "assets/logo_th.png"}/
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "assets/ico/105.png", src: "assets/logo_th.png"}/
+        / home
+        / about
+        %section#about.section
+          .row
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "assets/demo/ava-1.jpg", src: "assets/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Barker
+                  %p.text-center Software engineer.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/093.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/096.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/105.png", src: "assets/logo_th.png"}/
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "assets/demo/ava-2.jpg", src: "assets/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Johnson
+                  %p.text-center JavaScript developer.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/093.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "asses/ico/096.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/105.png", src: "assets/logo_th.png"}/
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "assets/demo/ava-3.jpg", src: "assets/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Addison
+                  %p.text-center Web Technical Specialist.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/093.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/096.png", src: "assets/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/105.png", src: "assets/logo_th.png"}/
+          .row
+            .large-8.medium-8.small-centered.columns
+              .about_info
+                We channel our clients' voices and values, create compelling narratives, and make complex information accessible. Online and off.
+        / about
+        / portfolio
+        %section#portfolio.section.clearfix
+          .row
+            .small-12.large-12.columns
+              %ul#filter
+                %li.active
+                  %a{href: "#"} Reset
+                %li
+                  %a{href: "#"} All
+                %li
+                  %a{href: "#"} Cards
+                %li
+                  %a{href: "#"} Mockups
+                %li
+                  %a{href: "#"} Design
+          .row
+            .small-12.large-12.columns
+              %ul#projects
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/cards_1.jpg", src: "assets/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/mockup_1.jpg", src: "assets/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/design_1.jpg", src: "assets/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/cards_2.jpg", src: "assets/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/mockup_2.jpg", src: "assets/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/design_2.jpg", src: "assets/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/cards_3.jpg", src: "assets/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/mockup_3.jpg", src: "assets/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/design_3.jpg", src: "assets/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/cards_4.jpg", src: "assets/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/mockup_4.jpg", src: "assets/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "assets/demo/design_4.jpg", src: "assets/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+              / /portfolio
+            / /columns
+          / /row
+        / / porftolio
+        / services
+        %section#services.section
+          / row
+          #prices.row
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 BASIC
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      39
+                    %small Month
+                %li
+                  %strong> 10
+                  Hours
+                %li
+                  %strong> 5GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan.featured
+                %li.plan-name
+                  %h3 NORMAL
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      39
+                    %small Month
+                %li
+                  %strong> 10
+                  Hours
+                %li
+                  %strong> 5GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 SILVER
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      29
+                    %small Month
+                %li
+                  %strong> 5
+                  Hours
+                %li
+                  %strong> 1GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Not Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 GOLD
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      29
+                    %small Month
+                %li
+                  %strong> 5
+                  Hours
+                %li
+                  %strong> 1GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Not Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+          / /.row
+        / / services
+        / contact
+        %section#contact.section
+          .row
+            %h3.small-6.small-centered.column.text-center
+              Contact with Us.
+          / row
+          .row
+            .small-12.medium-6.large-centered.columns
+              %form#mycontact{"data-abide" => ""}
+                .name-field
+                  %label
+                    Your name
+                    %small required
+                  %input{pattern: "[a-zA-Z]+", placeholder: "Write your name ...", required: "", type: "text"}/
+                  %small.error Name is required and must be a string.
+                .email-field
+                  %label
+                    Email
+                    %small required
+                  %input{placeholder: "Write your email ...", required: "", type: "email"}/
+                  %small.error An email address is required.
+                %label Menssage
+                %textarea.textarea{placeholder: "Write a menssage ..."}
+                %button{type: "submit"} Send Menssage
+        / / contact
+        %footer#footer
+          .row
+            .large-12.medium-12.columns
+              .copyright.text-center
+                %a{href: "#"} Mab design
+                \© 2014.
+      / / inner
+    / / wrapper
+    / JS  here
+
+
