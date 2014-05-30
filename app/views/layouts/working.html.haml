@@ -1,0 +1,406 @@
+!!!
+/[if IE 9] <html class="lt-ie10" lang="en" >
+/[if IE 10] <html class="ie10" lang="en" >
+%html.no-js{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}/
+    %title MAB
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / Normalize CSS
+    %link{href: "css/normalize.css", rel: "stylesheet"}/
+    / Foundation core CSS
+    %link{href: "css/foundation.css", rel: "stylesheet"}/
+    / Foundation font icons core CSS
+    %link{href: "css/foundation-icons.css", rel: "stylesheet"}/
+    / Custom styles for this template
+    %link{href: "css/app.css", rel: "stylesheet"}/
+    / Media Queries css
+    %link{href: "css/media_queries.css", rel: "stylesheet"}/
+    / Google Web Fonts CSS
+    %link{href: "http://fonts.googleapis.com/css?family=Lato", rel: "stylesheet", type: "text/css"}/
+    / Favicons
+    %link{href: "img/favicon/favicon.ico", rel: "icon", type: "image/x-icon"}/
+    / For third-generation iPad with high-resolution Retina display:
+    %link{href: "img/favicon/apple-touch-icon-144x144-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "144x144"}/
+    / For iPhone with high-resolution Retina display:
+    %link{href: "img/favicon/apple-touch-icon-114x114-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "114x114"}/
+    / For first- and second-generation iPad:
+    %link{href: "img/favicon/apple-touch-icon-72x72-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "72x72"}/
+    / For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+    %link{href: "img/favicon/apple-touch-icon-precomposed.png", rel: "apple-touch-icon-precomposed"}/
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    / Modernizr Scripts
+    %script{src: "js/modernizr.js"}
+  %body
+    / preloader
+    .preloader
+      %img{alt: "preload", src: "img/preloader.gif"}/
+    / / preloader
+    / menu
+    #menu
+      .inner
+        %nav
+          %span.logo
+          %a.home{href: "#home"}
+            %img.preloadThis{alt: "link", "data-src" => "img/ico/001.png", src: "img/logo_th.png"}/
+          %a.about{href: "#about"}
+            %img.preloadThis{alt: "link", "data-src" => "img/ico/049.png", src: "img/logo_th.png"}/
+          %a.portfolio{href: "#portfolio"}
+            %img.preloadThis{alt: "link", "data-src" => "img/ico/130.png", src: "img/logo_th.png"}/
+          %a.services{href: "#services"}
+            %img.preloadThis{alt: "link", "data-src" => "img/ico/151.png", src: "img/logo_th.png"}/
+          %a.contact{href: "#contact"}
+            %img.preloadThis{alt: "link", "data-src" => "img/ico/019.png", src: "img/logo_th.png"}/
+    .wrapper
+      .inner
+        / home
+        %section#home.section.show
+          .row
+            .large-6.medium-centered.small-centered.columns
+              %h1.head_title.text-center MAB
+              %h2.subhead_title.text-center THEME DESIGN STUDIO
+              %p.text-center Let's tell the stories that matter.
+              %ul.share.text-center
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "img/ico/093.png", src: "img/logo_th.png"}/
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "img/ico/096.png", src: "img/logo_th.png"}/
+                %li
+                  %a{href: "#"}
+                    %img.preloadThis{alt: "link", "data-src" => "img/ico/105.png", src: "img/logo_th.png"}/
+        / home
+        / about
+        %section#about.section
+          .row
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "img/demo/ava-1.jpg", src: "img/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Barker
+                  %p.text-center Software engineer.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/093.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/096.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/105.png", src: "img/logo_th.png"}/
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "img/demo/ava-2.jpg", src: "img/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Johnson
+                  %p.text-center JavaScript developer.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/093.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/096.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/105.png", src: "img/logo_th.png"}/
+            .large-4.medium-4.small-12.columns
+              .about_widget
+                .about_img
+                  %img.preloadThis{alt: "", "data-src" => "img/demo/ava-3.jpg", src: "img/logo_th.png"}/
+                .about_caption
+                  %h3.about_name Addison
+                  %p.text-center Web Technical Specialist.
+                  %ul.share.text-center
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/093.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/096.png", src: "img/logo_th.png"}/
+                    %li
+                      %a{href: "#"}
+                        %img.preloadThis{alt: "link", "data-src" => "img/ico/105.png", src: "img/logo_th.png"}/
+          .row
+            .large-8.medium-8.small-centered.columns
+              .about_info
+                We channel our clients' voices and values, create compelling narratives, and make complex information accessible. Online and off.
+        / about
+        / portfolio
+        %section#portfolio.section.clearfix
+          .row
+            .small-12.large-12.columns
+              %ul#filter
+                %li.active
+                  %a{href: "#"} Reset
+                %li
+                  %a{href: "#"} All
+                %li
+                  %a{href: "#"} Cards
+                %li
+                  %a{href: "#"} Mockups
+                %li
+                  %a{href: "#"} Design
+          .row
+            .small-12.large-12.columns
+              %ul#projects
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/cards_1.jpg", src: "img/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/mockup_1.jpg", src: "img/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/design_1.jpg", src: "img/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/cards_2.jpg", src: "img/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/mockup_2.jpg", src: "img/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/design_2.jpg", src: "img/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/cards_3.jpg", src: "img/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/mockup_3.jpg", src: "img/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/design_3.jpg", src: "img/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.design.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/cards_4.jpg", src: "img/logo_th.png"}/
+                    %h4 Card One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.mockups.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/mockup_4.jpg", src: "img/logo_th.png"}/
+                    %h4 Mockups One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+                %li.cards.portfolio-item
+                  .tumb
+                    %img.preloadThis{alt: "Recent Work", "data-src" => "img/demo/design_4.jpg", src: "img/logo_th.png"}/
+                    %h4 Design One
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+                      %a{href: "portfolio_item.html"} More..
+                  / /tumb
+              / /portfolio
+            / /columns
+          / /row
+        / / porftolio
+        / services
+        %section#services.section
+          / row
+          #prices.row
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 BASIC
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      39
+                    %small Month
+                %li
+                  %strong> 10
+                  Hours
+                %li
+                  %strong> 5GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan.featured
+                %li.plan-name
+                  %h3 NORMAL
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      39
+                    %small Month
+                %li
+                  %strong> 10
+                  Hours
+                %li
+                  %strong> 5GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 SILVER
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      29
+                    %small Month
+                %li
+                  %strong> 5
+                  Hours
+                %li
+                  %strong> 1GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Not Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+            .large-3.medium-6.columns
+              %ul.plan
+                %li.plan-name
+                  %h3 GOLD
+                %li.plan-price
+                  %div
+                    %span.price
+                      %sup> $
+                      29
+                    %small Month
+                %li
+                  %strong> 5
+                  Hours
+                %li
+                  %strong> 1GB
+                  Cloud
+                %li
+                  %strong> 400GB
+                  Bandwidth
+                %li
+                  %strong> Chat:
+                  Not Support
+                %li
+                  %strong> Forum:
+                  Support
+                %li.plan-action
+                  %a.button{href: "#"} Give me this
+          / /.row
+        / / services
+        / contact
+        %section#contact.section
+          .row
+            %h3.small-6.small-centered.column.text-center
+              Contact with Us.
+          / row
+          .row
+            .small-12.medium-6.large-centered.columns
+              %form#mycontact{"data-abide" => ""}
+                .name-field
+                  %label
+                    Your name
+                    %small required
+                  %input{pattern: "[a-zA-Z]+", placeholder: "Write your name ...", required: "", type: "text"}/
+                  %small.error Name is required and must be a string.
+                .email-field
+                  %label
+                    Email
+                    %small required
+                  %input{placeholder: "Write your email ...", required: "", type: "email"}/
+                  %small.error An email address is required.
+                %label Menssage
+                %textarea.textarea{placeholder: "Write a menssage ..."}
+                %button{type: "submit"} Send Menssage
+        / / contact
+        %footer#footer
+          .row
+            .large-12.medium-12.columns
+              .copyright.text-center
+                %a{href: "#"} Mab design
+                \© 2014.
+      / / inner
+    / / wrapper
+    / JS  here
+    %script{src: "js/vendor/jquery.js"}
+    %script{src: "js/foundation.min.js"}
+    %script{src: "js/main.js"}

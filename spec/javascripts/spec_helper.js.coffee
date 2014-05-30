@@ -6,6 +6,13 @@
 
 #= require application
 
+# set preferences
+# (http://blog.crowdint.com/2013/11/20/testing-ember-js-applications-with-konacha.html)
+mocha.ui('bdd');
+mocha.globals(['Ember', 'DS', 'Matchmup', 'MD5']);
+mocha.timeout(5);
+chai.Assertion.includeStack = true;
+
 # Prevent the router from manipulating the browser's URL.
 Matchmup.Router.reopen location: 'none'
 

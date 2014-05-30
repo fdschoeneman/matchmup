@@ -9,4 +9,5 @@
 window.Matchmup = Ember.Application.create LOG_TRANSITIONS: true
 
 
-App.deferReadiness()
+
+$(function(){ $(document).foundation(); });
