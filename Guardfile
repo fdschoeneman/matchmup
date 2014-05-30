@@ -27,7 +27,8 @@ end
 #  - :notification, defaults to true
 #  - :rails_environment_file, location of rails environment file,
 #    should be able to find it automatically
-guard :konacha do
+guard :konacha, :driver => :poltergeist do
+  require 'capybara/poltergeist'
   watch(%r{^app/assets/javascripts/(.*)\.js(\.coffee)?$}) { |m| "#{m[1]}_spec.js" }
   watch(%r{^spec/javascripts/.+_spec(\.js|\.js\.coffee)$})
 end

@@ -3,5 +3,5 @@
 
 describe "Matchmup.Router", ->
   it "is an Ember.Router", ->
-    assert.ok App.Router
-    assert.ok Ember.Router.detect(App.Router)
+    assert.ok Matchmup.Router
+    assert.ok Ember.Router.detect(Matchmup.Router)

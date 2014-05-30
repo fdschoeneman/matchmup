@@ -62,6 +62,7 @@ group :development, :test do
   # minitest & friends
   gem 'minitest'
   gem 'minitest-rails'
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'spring'
 

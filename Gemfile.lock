@@ -262,6 +262,7 @@ PLATFORMS
 DEPENDENCIES
   aasm
   awesome_print
+  capybara
   coffee-rails (~> 4.0.0)
   database_cleaner
   debugger

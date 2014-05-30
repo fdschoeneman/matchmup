@@ -7,7 +7,7 @@
 #= require application
 
 # Prevent the router from manipulating the browser's URL.
-App.Router.reopen location: 'none'
+Matchmup.Router.reopen location: 'none'
 
 # **** Utility methods (for tests only - not for use in apps) ***
 
@@ -15,10 +15,10 @@ window.TestUtil ||=
   fakeServer: ->
       sinon.fakeServer.create()
   lookupStore: ->
-    App.__container__.lookup 'store:main'
+    Matchmup.__container__.lookup 'store:main'
 
   lookupRouter: ->
-    App.__container__.lookup 'router:main'
+    Matchmup.__container__.lookup 'router:main'
 
   appendView: ->
     Ember.run( ->
@@ -28,7 +28,7 @@ window.TestUtil ||=
 # Useful for placing local test vars
 window.Test ||= {}
 # Shorthand
-window.T = Test 
+window.T = Test
 
 # **** Global before / after ***
 
@@ -54,10 +54,10 @@ beforeEach( (done) ->
 
     # This needs to be done here, after each iframe has been setup,
     # instead of in a global `before`.
-    App.advanceReadiness()
+    Matchmup.advanceReadiness()
 
     # When App readiness promise resolves, setup is complete
-    App.then( ->
+    Matchmup.then( ->
       done()
     )
   )
@@ -66,7 +66,7 @@ beforeEach( (done) ->
 afterEach( ->
   # Reset App
   Ember.run( ->
-    App.reset()
+    Matchmup.reset()
   )
 
   # reset all test variables!
