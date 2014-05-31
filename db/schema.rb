@@ -11,17 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529222103) do
+ActiveRecord::Schema.define(version: 20140531214121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "demos", force: true do |t|
     t.integer  "contractor_id"
     t.integer  "client_id"
     t.integer  "facilitator_id"
-    t.integer  "facility_id"
+    t.integer  "venue_id"
+    t.datetime "drafted_at"
+    t.datetime "contracted_at"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.datetime "submitted_at"
+    t.datetime "rejected_at"
+    t.datetime "accepted_at"
+    t.datetime "payment_sent_at"
+    t.datetime "payment_received_at"
+    t.datetime "contractor_rated_at"
+    t.datetime "client_rated_at"
+    t.hstore   "contractor_rating"
+    t.hstore   "client_rating"
+    t.decimal  "hourly_rate"
+    t.text     "terms"
     t.string   "aasm_state"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "positions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "org_id"
+    t.string   "title"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

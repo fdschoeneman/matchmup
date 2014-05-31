@@ -5,7 +5,7 @@ Dir[File.expand_path('test/support/*.rb')].each { |file| require file }
 
 require "rails/test_help"
 
-include DBMatchers
+include TestMatchers
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!

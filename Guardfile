@@ -18,6 +18,7 @@ guard :minitest, spring: true, bundler: false  do
   watch(%r{^test/(.*)\/?test_(.*)\.rb$})
   watch(%r{^test/test_helper\.rb$})                       { 'test' }
   watch(%r{^test/support/(.+)\.rb$})                      { 'test' }
+  watch(%r{^test/meta/(.+)\.rb$})                      { 'test' }
   watch(%r{^test/.+_test\.rb$})
 end
 

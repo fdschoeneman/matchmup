@@ -1,4 +1,4 @@
-module TestMatchers
+module DBMatchers
 
   def must_have_column(column, type)
     subject.columns_hash[column.to_s].type.must_equal type

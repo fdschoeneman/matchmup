@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -6,6 +7,8 @@ class User < ActiveRecord::Base
 
   # associations
   has_many :demos
+  has_many :orgs, through: :positions
+  has_many :positions
 
   # validations
 end

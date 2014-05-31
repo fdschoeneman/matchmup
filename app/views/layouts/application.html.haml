@@ -9,20 +9,21 @@
     %link{href: "assets/favicon/apple-touch-icon-precomposed.png", rel: "apple-touch-icon-precomposed"}/
     / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
-      / <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      / <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     = stylesheet_link_tag    'application', media: 'all'
-    / # = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'vendor/modernizr'
+
     = csrf_meta_tags
   %body
+    .preloader
+      = image_tag("preloader.gif", alt: "preload")
     %p.notice= notice
     %p.alert= alert
     blah
     - if user_signed_in?
       = button_to 'Sign Out', destroy_user_session_path, method: :delete
     = yield
-    / .preloader
-    /   = image_tag("preloader.gif", alt: "preload")
     #menu
       .inner
         %nav
@@ -90,7 +91,7 @@
                         %img.preloadThis{alt: "link", "data-src" => "assets/ico/093.png", src: "assets/logo_th.png"}/
                     %li
                       %a{href: "#"}
-                        %img.preloadThis{alt: "link", "data-src" => "asses/ico/096.png", src: "assets/logo_th.png"}/
+                        %img.preloadThis{alt: "link", "data-src" => "assets/ico/096.png", src: "assets/logo_th.png"}/
                     %li
                       %a{href: "#"}
                         %img.preloadThis{alt: "link", "data-src" => "assets/ico/105.png", src: "assets/logo_th.png"}/
@@ -382,6 +383,5 @@
       / / inner
     / / wrapper
     / JS  here
-
-
     = javascript_include_tag 'application'
+

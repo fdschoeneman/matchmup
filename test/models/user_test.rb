@@ -2,36 +2,39 @@ require "test_helper"
 
 describe User do
 
+  subject { User }
+
   describe "db" do
 
     specify "columns & types" do
 
-      must_have_column(User, :email, :string)
-      must_have_column(User, :encrypted_password, :string)
-      must_have_column(User, :reset_password_token, :string)
-      must_have_column(User, :reset_password_sent_at, :datetime)
-      must_have_column(User, :remember_created_at, :datetime)
-      must_have_column(User, :sign_in_count, :integer)
-      must_have_column(User, :current_sign_in_at, :datetime)
-      must_have_column(User, :last_sign_in_ip, :string)
-      must_have_column(User, :last_sign_in_at, :datetime)
+      must_have_column(:email, :string)
+      must_have_column(:encrypted_password, :string)
+      must_have_column(:reset_password_token, :string)
+      must_have_column(:reset_password_sent_at, :datetime)
+      must_have_column(:remember_created_at, :datetime)
+      must_have_column(:sign_in_count, :integer)
+      must_have_column(:current_sign_in_at, :datetime)
+      must_have_column(:last_sign_in_ip, :string)
+      must_have_column(:last_sign_in_at, :datetime)
     end
 
     specify "indexes" do
 
-      must_have_index("users", "email")
-      must_have_index("users", "reset_password_token")
+      must_have_index("email")
+      must_have_index("reset_password_token")
     end
-
   end
 
   describe "associations" do
 
     specify "has_many" do
 
-      must_have_many(User, :demos)
-
+      must_have_many(:demos)
+      must_have_many(:positions)
+      must_have_many(:orgs)
     end
+
     specify "belongs to" do
 
 

@@ -284,7 +284,7 @@ img.loaded {
     position: relative;
 }
 #menu nav > span.logo {
-    background: url('../assets/logo.png') no-repeat scroll center center #ECF0F1;
+    background: url('/assets/logo.png') no-repeat scroll center center #ECF0F1;
     display: block;
     position: relative;
     text-align: center;
@@ -681,7 +681,7 @@ section#contact {
     width: 80px;
 }
 #item_header .logo {
-    background: url('../img/logo_th.png') no-repeat scroll center center transparent;
+    background: url('/img/logo_th.png') no-repeat scroll center center transparent;
     display: block;
     position: relative;
     text-align: center;
