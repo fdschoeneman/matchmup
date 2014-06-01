@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User::associations" skipped="0" failures="0" errors="0" tests="2" assertions="6" time="0.002813945">
+  <testcase name="test_0001_has_many" classname="User::associations" assertions="6" time="0.001873173">
+  </testcase>
+  <testcase name="test_0002_belongs to" classname="User::associations" assertions="0" time="0.000940772">
+  </testcase>
+</testsuite>

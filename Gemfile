@@ -58,6 +58,7 @@ end
 
 group :test do
 
+ gem "minitest-reporters"
 end
 
 group :development, :test do

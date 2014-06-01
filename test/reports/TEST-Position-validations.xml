@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Position::validations" skipped="0" failures="0" errors="0" tests="2" assertions="4" time="0.017012469">
+  <testcase name="test_0001_org_id" classname="Position::validations" assertions="2" time="0.014255709">
+  </testcase>
+  <testcase name="test_0002_user_id" classname="Position::validations" assertions="2" time="0.00275676">
+  </testcase>
+</testsuite>

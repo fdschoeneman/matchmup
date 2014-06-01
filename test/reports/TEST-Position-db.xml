@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Position::db" skipped="0" failures="0" errors="0" tests="2" assertions="6" time="0.001487663">
+  <testcase name="test_0002_associations" classname="Position::db" assertions="2" time="0.000766835">
+  </testcase>
+  <testcase name="test_0001_columns &amp; types" classname="Position::db" assertions="4" time="0.000720828">
+  </testcase>
+</testsuite>

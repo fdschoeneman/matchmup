@@ -32,4 +32,18 @@ describe Demo do
       must_have_column(:aasm_state, :string)
     end
   end
+
+  describe "associations" do
+
+    specify "has_many" do
+
+      must_have_many :bids
+    end
+
+    specify "belongs_to" do
+
+      must_belong_to(:contractor)
+      must_belong_to(:client)
+    end
+  end
 end

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User::db" skipped="0" failures="0" errors="0" tests="2" assertions="13" time="0.014792696">
+  <testcase name="test_0002_indexes" classname="User::db" assertions="4" time="0.012151246">
+  </testcase>
+  <testcase name="test_0001_columns &amp; types" classname="User::db" assertions="9" time="0.00264145">
+  </testcase>
+</testsuite>

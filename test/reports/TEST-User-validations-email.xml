@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User::validations::email" skipped="0" failures="0" errors="0" tests="2" assertions="9" time="0.01249343">
+  <testcase name="test_0002_must not be invalid" classname="User::validations::email" assertions="6" time="0.008296964">
+  </testcase>
+  <testcase name="test_0001_must not be blank" classname="User::validations::email" assertions="3" time="0.004196466">
+  </testcase>
+</testsuite>

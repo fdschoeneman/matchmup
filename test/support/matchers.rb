@@ -10,7 +10,12 @@ module TestMatchers
 
   def must_have_index(index)
     connection = ActiveRecord::Base.connection
-    connection.indexes(subject.table_name).collect(&:columns).must_include([index])
+    connection.indexes(subject.table_name).collect(&:columns).must_include [index.to_s]
+  end
+
+  def must_have_multiple_index(index)
+    connection = ActiveRecord::Base.connection
+    connection.indexes(subject.table_name).collect(&:columns.to_sym).must_include(index.map &:to_s)
   end
 
   def wont_have_index(index)
